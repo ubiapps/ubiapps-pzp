@@ -1,0 +1,42 @@
+{ "name": "webinos-pzp",
+  "version": "0.8.3",
+  "description": "Webinos device functionality is implemented in PZP",
+  "main": "./lib/pzp_sessionHandling.js",
+  "author": "Habib Virji  <habib.virji@samsung.com>",
+  "homepage": "http://www.webinos.org",
+  "bugs": "http://jira.webinos.org",
+  "repository":
+   { "type": "git",
+     "url": "git://github.com/webinos/webinos-pzp.git"
+   },
+  "directories": {
+    "lib": "./lib",
+    "node_modules": "./node_modules",
+    "test":"./test"
+  },
+  "bundleDependencies":["webinos-api-test"],
+  "dependencies":{
+    "webinos-certificateHandler": "git://github.com/webinos/webinos-certificateHandler",
+    "webinos-utilities"         : "git://github.com/webinos/webinos-utilities",
+    "webinos-policy"            : "git://github.com/webinos/webinos-policy",
+    "webinos-dashboard"         : "git://github.com/webinos/webinos-dashboard",
+    "webinos-api-applauncher"   : "git://github.com/webinos/webinos-api-applauncher",
+    "webinos-jsonrpc2"          : "*",
+    "websocket"                 : "1.0.2",
+    "optimist"                  : "x.x.x"
+  },
+  "devDependencies": {
+    "jasmine-node": "1.x.x"
+  },
+  "engines": {
+    "node": ">= 0.6.0",
+    "npm": ">= 1.1.17"
+  },
+  "preferGlobal": true,
+  "bin": {
+    "webinos_pzp": "webinos_pzp.js"
+  },
+  "scripts": {
+    "travis-test": "./test/travis-test.sh"
+  }
+}

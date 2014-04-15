@@ -1,0 +1,48 @@
+<html xmlns="http://www.w3.org/1999/html" xmlns="http://www.w3.org/1999/html">
+<head>
+<title>PZP Dashboard</title>
+<!--<link rel="icon" href="images/webinos.ico" type="image/x-icon">-->
+<link type="text/css"  rel="stylesheet" href="./css/index.css" media="screen"/>
+<link type='text/css'  rel='stylesheet' href='http://fonts.googleapis.com/css?family=Ovo'>
+<link type='text/css'  rel='stylesheet' href="./css/jquery.mobile-1.3.0.min.css" />
+<script type="text/javascript" src="./js/jquery-1.8.2.min.js"></script>
+<script type="text/javascript" src="./js/jquery.mobile-1.3.0.min.js"></script>
+<script type="text/javascript" src="./webinos.js"></script>
+<script type="text/javascript" src="./js/index.js"></script>
+</head>
+<body>
+<div id="title"></div>
+<div id="webinosVersion"> </div>
+<div id="container">
+    <div class="column" id="center"> <h2> Test Webinos APIs</h2>
+        <p>Pzp allows your to enroll, connect and share service between your local/remote devices. </p>
+        <p> It allows enforcing policies on services you share. You can also connect to other users and share services with them.</p>
+        <p> Use below links to access Webinos API TestPages</p>
+        <div id="APILinks" class="eachElement"></div>
+        <div id="status"> STATUS: <span id="message"></span></div>
+    </div>
+    <div class="column" id="left">
+        <div class="eachElement"><a href="#enroll-DeEnrollPzp"  id="enroll-DeEnrollPzp" class="fill-div"> </a></div>
+        <div class="eachElement"><a href="#pzpLocalDiscovery"   id="pzpLocalDiscovery"  class="fill-div"> Local Discovery</a></div>
+        <div class="eachElement"><a href="#fetchConfiguration"  id="fetchConfiguration" class="fill-div"> View/Edit PZP Configuration</a></div>
+    </div>
+    <div class="column" id="right">
+        <div id="connectedDevices"></div>
+    </div>
+</div>
+<div id="footer">
+    Powered by <a href="http://wwww.webinos.org">webinos</a> | <a href="http://developer.webinos.org">Developer resources
+    on webinos</a>
+</div>
+<div id="modalDisplay">
+    <div id="modalDisplayOverlay">
+        &nbsp;
+    </div>
+    <div id="vertical-offset">
+        <div id="modalContents">
+            &nbsp;
+        </div>
+    </div>
+</div>
+</body>
+</html>

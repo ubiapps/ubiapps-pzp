@@ -1,0 +1,66 @@
+<html>
+<head>
+    <title>webinos API Test Status</title>
+    <style>
+        a { color: White; }
+        fieldset { float:right; }
+        .info { font-size: .8em; display:inline-block; }
+        .pzpRunning { color: Green; }
+        .pzpNotRunning { color: Red; }
+        .title { padding: 10px 0px 10px 0px; font-size: 2em; }
+        .subtitle { padding: 5px 0px 5px 0px; font-size: 1.2em; }
+        .test { padding: 10px; margin-bottom: 1px; }
+        .implemented { background-color: #777; }
+        .unimplemented { background-color: Red; }
+        .key { display: inline-block; width: 20px; }
+    </style>
+    <script type="text/javascript" src="/js/jquery-1.8.2.min.js"></script>
+    <script type="text/javascript" src="/webinos.js"></script>
+    <script type="text/javascript">
+        $(function () {
+            function gotPZP(data) {
+                $(".info").html("PZP running").removeClass("pzpNotRunning").addClass("pzpRunning");
+            }
+            webinos.session.addListener('registeredBrowser', gotPZP);
+        });
+    </script>
+</head>
+<body>
+<fieldset>
+    <legend>key</legend>
+    <div>
+        <div class="key implemented">&nbsp;</div><span> - implemented</span>
+    </div>
+    <div>
+        <div class="key unimplemented">&nbsp;</div><span> - not implemented</span>
+    </div>
+</fieldset>
+<div class="title">webinos API test status - <div class="info pzpNotRunning">!!PZP NOT RUNNING!!</div></div>
+<div>
+    <div class="subtitle">click on a link below to run the tests for an individual api</div>
+        <div class="test implemented"><a href="/webinos-api-app2app/test/web_root/jasmine/App2App.html" target="_blank">Run app2app API tests</a></div>
+        <div class="test implemented"><a href="/webinos-api-applauncher/test/web_root/jasmine/ApplauncherSpec.html" target="_blank">Run applauncher API tests</a></div>
+        <div class="test unimplemented"><a href="/webinos-api-authentication/test/web_root/jasmine/SpecRunner.html" target="_blank">Run authentication API tests</a></div>
+        <div class="test implemented"><a href="/webinos-api-contacts/test/web_root/jasmine/Contacts.html" target="_blank">Run contacts API tests</a></div>
+        <div class="test unimplemented"><a href="/webinos-api-context/test/web_root/jasmine/test-context.html" target="_blank">Run context API tests</a></div>
+        <div class="test implemented"><a href="/webinos-api-deviceOrientation/test/web_root/jasmine/DeviceOrientation.html" target="_blank">Run deviceorientation API tests</a></div>
+        <div class="test implemented"><a href="/webinos-api-deviceStatus/test/web_root/jasmine/SpecRunner.html" target="_blank">Run devicestatus API tests</a></div>
+<!--         <div class="test implemented"><a href="/webinos-api-discovery/test/web_root/jasmine/SpecRunner.html" target="_blank">Run discovery API tests</a></div> -->
+        <div class="test implemented"><a href="/webinos-api-events/test/web_root/jasmine/events.html" target="_blank">Run events API tests</a></div>
+        <div class="test implemented"><a href="/webinos-api-file/test/web_root/jasmine/File.html" target="_blank">Run file API tests</a></div>
+        <div class="test implemented"><a href="/webinos-api-geolocation/test/web_root/jasmine/AutomatedSpec.html" target="_blank">Run geolocation API tests</a></div>
+<!--         <div class="test unimplemented"><a href="/webinos-api-oauth/test/web_root/jasmine/SpecRunner.html" target="_blank">Run oauth API tests</a></div> -->
+        <div class="test implemented"><a href="/webinos-api-iot/test/web_root/jasmine/sensors/SpecRunner.html" target="_blank">Run Sensors API tests</a></div>
+        <div class="test implemented"><a href="/webinos-api-iot/test/web_root/jasmine/actuators/SpecRunner.html" target="_blank">Run Actuators API tests</a></div>
+        <div class="test implemented"><a href="/webinos-api-mediacontent/test/web_root/jasmine/SpecRunner.html" target="_blank">Run MediaContent API tests</a></div>
+        <div class="test implemented"><a href="/webinos-api-payment/test/web_root/jasmine/Payment.html" target="_blank">Run payment API tests</a></div>
+        <div class="test implemented"><a href="/webinos-api-tv/test/web_root/jasmine/TV.html" target="_blank">Run tv API tests</a></div>
+        <div class="test implemented"><a href="/webinos-api-vehicle/test/web_root/jasmine/AutomatedSpec.html" target="_blank">Run vehicle API tests</a></div>
+<!--         <div class="test implemented"><a href="/webinos-api-zonenotification/test/web_root/jasmine/SpecRunner.html" target="_blank">Run zone notification API tests</a></div>         -->
+</div>
+<div>
+    <div class="subtitle">click on the link below to run all api tests</div>
+    <div class="test implemented"><a href="JasmineSpecRunner.html" target="_blank">run all jasmine tests</a></div>
+</div>
+</body>
+</html>
